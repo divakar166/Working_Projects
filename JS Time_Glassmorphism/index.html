@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timer</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section>
+		<div class="dark"></div>
+		<div class="box">
+			<div class="timer_text"></div>
+			<div class="date_text"></div>
+		</div>
+	</section>
+	<script>
+		var monthArray = ['Jan','Feb','Mar','Apr','May','June','July','Sept','Oct','Nov','Dec']
+		let time_div = document.querySelector('.timer_text');
+		let date_div = document.querySelector('.date_text');
+		window.onload = displayClock();
+		function displayClock(){
+			var display = new Date();
+			time_div.innerHTML = display.getHours() + ':' + display.getMinutes() + ':' + display.getSeconds();
+			date_div.innerHTML = display.getDate() + ' ' + monthArray[display.getMonth()] + ' ' +display.getFullYear();
+			setTimeout(displayClock,1000);
+		}
+	</script>
+</body>
+</html>
