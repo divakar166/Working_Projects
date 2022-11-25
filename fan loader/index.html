@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+	<section>	
+		<input type="checkbox" id="main_checkbox">
+		<div class="loader">
+			<div class="inner-loader">
+				<div class="handle"></div>
+				<div class="handle handle_1"></div>
+				<div class="handle handle_2"></div>
+				<div class="handle handle_3"></div>
+				<div class="handle handle_4"></div>
+				<div class="handle handle_5"></div>
+			</div>
+			<div class="center"></div>
+		</div>
+		<label>
+			<span class="btn"></span>
+			<input type="checkbox" id="check">
+			<i class="fas fa-power-off">9</i>
+		</label>
+	</section>
+	<script>
+		var animationCheck = document.querySelector('#check');
+		var animationChanger = document.querySelector('#main_checkbox');
+		animationCheck.addEventListener('click',()=>{
+			if(animationCheck.checked){
+				animationChanger.checked = true;
+			}else{
+				animationChanger.checked = false;
+			}
+		})
+	</script>
+</body>
+</html>
